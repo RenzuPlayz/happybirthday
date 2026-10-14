@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Meri Jaan ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#fff;
+    background:
+      radial-gradient(circle at 15% 15%,#8b164f55,transparent 30%),
+      radial-gradient(circle at 85% 25%,#ff9ac455,transparent 25%),
+      linear-gradient(145deg,#09030b,#260818 45%,#080208);
+    font-family:'Cormorant Garamond',serif;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(120deg,transparent 30%,#ffffff08 50%,transparent 70%);
+    animation:shine 7s infinite;
+}
+@keyframes shine{0%,100%{transform:translateX(-100%)}50%{transform:translateX(100%)}}
+
+.stars span{
+    position:fixed;
+    width:3px;height:3px;
+    background:#fff;
+    border-radius:50%;
+    opacity:.6;
+    animation:twinkle 2.5s infinite alternate;
+}
+@keyframes twinkle{from{opacity:.15;transform:scale(.6)}to{opacity:1;transform:scale(1.5)}}
+
+.hearts span{
+    position:fixed;
+    bottom:-60px;
+    z-index:0;
+    font-size:22px;
+    animation:float 9s linear infinite;
+    opacity:0;
+    pointer-events:none;
+}
+@keyframes float{
+    0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}
+    12%{opacity:.8}
+    100%{transform:translateY(-115vh) rotate(35deg) scale(1.3);opacity:0}
+}
+.hearts span:nth-child(1){left:8%;animation-delay:0s}
+.hearts span:nth-child(2){left:22%;animation-delay:3s}
+.hearts span:nth-child(3){left:38%;animation-delay:6s}
+.hearts span:nth-child(4){left:56%;animation-delay:1s}
+.hearts span:nth-child(5){left:73%;animation-delay:4s}
+.hearts span:nth-child(6){left:90%;animation-delay:7s}
+
+.container{
+    position:relative;
+    z-index:2;
+    width:min(900px,92%);
+    margin:auto;
+    padding:25px 0 70px;
+}
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.small{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#f6b6d1;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.crown{font-size:54px;animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(65px,15vw,125px);
+    font-weight:400;
+    line-height:.95;
+    background:linear-gradient(90deg,#fff,#ffc0dc,#ffe7b1,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 8px 25px #ff559955);
+}
+
+.hero p{
+    max-width:600px;
+    margin:25px auto;
+    font-size:21px;
+    color:#fbddea;
+    line-height:1.6;
+}
+
+.scroll{
+    margin-top:35px;
+    font-size:13px;
+    letter-spacing:3px;
+    color:#dba5bd;
+    animation:bob 1.8s infinite;
+}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+.card{
+    position:relative;
+    padding:clamp(25px,6vw,60px);
+    margin:30px 0;
+    border-radius:35px;
+    background:linear-gradient(145deg,#ffffff10,#ffffff04);
+    border:1px solid #ffffff22;
+    box-shadow:0 30px 90px #0008, inset 0 1px #ffffff18;
+    backdrop-filter:blur(18px);
+}
+
+.card:before,.card:after{
+    content:"❤";
+    position:absolute;
+    color:#ff8eb8;
+    opacity:.45;
+    font-size:30px;
+}
+.card:before{top:20px;left:25px}
+.card:after{bottom:20px;right:25px}
+
+.letter-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+.letter-heading .icon{font-size:35px}
+.letter-heading h2{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    font-weight:400;
+    color:#ffd0e3;
+}
+.letter-heading p{
+    color:#cfaabd;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.letter{
+    direction:rtl;
+    text-align:right;
+    font-family:'Noto Nastaliq Urdu','Segoe UI',sans-serif;
+    font-size:19px;
+    line-height:2.05;
+    color:#fff3f8;
+}
+
+.letter p{margin-bottom:20px}
+
+.first{
+    font-size:25px;
+    color:#ffbfd9;
+    font-weight:600;
+}
+
+.highlight{
+    margin:28px 0;
+    padding:24px;
+    border-right:3px solid #ff8eb8;
+    border-radius:15px;
+    background:#ff7bab0b;
+    color:#ffd5e5;
+    font-size:21px;
+}
+
+.signature{
+    margin-top:35px;
+    text-align:left;
+    direction:rtl;
+    color:#ffc5dc;
+    font-size:22px;
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:45px 0;
+    color:#ff9fc3;
+}
+.divider:before,.divider:after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:linear-gradient(90deg,transparent,#ff9fc355);
+}
+.divider:after{background:linear-gradient(90deg,#ff9fc355,transparent)}
+
+.wishes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+.wish{
+    padding:22px 12px;
+    text-align:center;
+    border-radius:20px;
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+}
+.wish .emoji{font-size:30px}
+.wish h3{margin:8px 0;color:#ffd0e2}
+.wish p{font-family:Arial,sans-serif;font-size:13px;color:#d7bdc9;line-height:1.5}
+
+.button{
+    display:block;
+    margin:40px auto 0;
+    padding:16px 30px;
+    border:1px solid #ffd0e366;
+    border-radius:50px;
+    color:#4b102d;
+    background:linear-gradient(90deg,#ffc1db,#ffe4ae);
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 12px 35px #ff78a633;
+    transition:.25s;
+}
+.button:hover{transform:translateY(-4px) scale(1.02)}
+
+.secret{
+    display:none;
+    text-align:center;
+    margin-top:25px;
+    padding:25px;
+    border-radius:20px;
+    background:#ff86b50d;
+    color:#ffd4e5;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.footer{
+    text-align:center;
+    color:#a98195;
+    margin-top:45px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+@media(max-width:650px){
+    .container{width:94%;padding-top:10px}
+    .hero{min-height:78vh}
+    .hero p{font-size:18px}
+    .card{padding:28px 19px;border-radius:25px}
+    .letter{font-size:17px;line-height:1.9}
+    .highlight{font-size:18px;padding:18px}
+    .wishes{grid-template-columns:1fr}
+    .letter-heading h2{font-size:44px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars">
+<span style="left:8%;top:12%"></span><span style="left:19%;top:28%"></span>
+<span style="left:31%;top:9%"></span><span style="left:47%;top:20%"></span>
+<span style="left:62%;top:11%"></span><span style="left:78%;top:30%"></span>
+<span style="left:91%;top:14%"></span><span style="left:55%;top:38%"></span>
+</div>
+
+<div class="hearts">
+<span>❤️</span><span>💗</span><span>💖</span>
+<span>💕</span><span>💞</span><span>❤️</span>
+</div>
+
+<main class="container">
+
+<section class="hero">
+    <div class="small">A Special Day • For Someone Special</div>
+    <div class="crown">👑</div>
+    <h1>Happy Birthday<br>Jaan ❤️</h1>
+    <p>
+        Aaj ka din mere liye bhi utna hi khaas hai jitna tumhare liye,
+        kyun ke aaj woh insaan duniya mein aya tha jisne meri duniya
+        ko aur bhi khoobsurat bana diya. ✨
+    </p>
+    <div class="scroll">↓  SCROLL FOR YOUR LETTER  ↓</div>
+</section>
+
+<section class="card">
+
+<div class="letter-heading">
+    <div class="icon">💌</div>
+    <h2>Meri Jaan Ke Naam</h2>
+    <p>EK CHHOTI SI DIL KI BAAT</p>
+</div>
+
+<div class="letter">
+
+<p class="first">Meri jaan, ❤️</p>
+
+<p>
+Aaj tumhara birthday hai, lekin sach kahun to mujhe lagta hai
+ke aaj mere liye bhi celebration ka din hai. Kyun ke isi din
+Allah ne is duniya ko tum jaisa khoobsurat insaan diya.
+Aur meri sab se badi khushi ye hai ke meri zindagi mein tum ho.
+</p>
+
+<p>
+Mujhe nahi pata ke main apne dil ki har baat lafzon mein
+theek se bayan kar sakunga ya nahi, lekin itna zaroor janta hoon
+ke tum mere liye sirf ek naam ya ek shakhs nahi ho.
+Tum meri un khoobsurat wajahoon mein se ek ho jin ki wajah se
+mere chehre par bina kisi reason ke bhi smile aa jati hai.
+</p>
+
+<div class="highlight">
+"Bas itni si dua hai ke tum hamesha muskuraati raho,
+aur tumhari woh smile kabhi kisi gham ki wajah se kam na ho. ❤️"
+</div>
+
+<p>
+Tumhari choti choti baatein, tumhara hansna, tumhara naraz hona,
+phir thora sa pyaar se maan jana — ye sab mere liye bohat special hai.
+Shayad tumhe andaza bhi nahi ke tumhari ek choti si baat
+mera poora din behtar bana sakti hai.
+</p>
+
+<p>
+Aaj tumhari birthday par main tumse koi badi cheez nahi maangta.
+Main bas chahta hoon ke tumhari zindagi mein sukoon ho,
+tumhare sapne poore hon, tumhe har woh khushi mile
+jis ki tum haqdar ho, aur jab kabhi zindagi mushkil lage,
+to tumhe yaad rahe ke tum bohat special ho.
+</p>
+
+<p>
+Main chahta hoon ke tum apni life ka har naya chapter
+khushi ke saath likho. Jo cheezein tum chahti ho woh tumhe milen,
+jo log tumse sach mein pyaar karte hain woh hamesha tumhare paas rahen,
+aur tumhara dil kabhi kisi unnecessary sadness ka bojh na uthaye.
+</p>
+
+<p>
+Aur agar kabhi tumhe lage ke tum akeli ho, ya sab kuch thora
+mushkil ho raha hai, to bas itna yaad rakhna:
+duniya mein kahin na kahin ek dil aisa bhi hai
+jo tumhari khushi ko dil se important samajhta hai. ❤️
+</p>
+
+<p>
+Tum mere liye kisi perfect movie scene ki tarah nahi ho,
+balki us khoobsurat reality ki tarah ho jise main khona nahi chahta.
+Tumhari presence hi mere liye ek beautiful feeling hai.
+</p>
+
+<p>
+Aaj candles blow karte waqt jo bhi wish maango,
+dil se maangna. Shayad aaj aasman bhi tumhari ek wish
+ko thora extra seriously le. ✨
+</p>
+
+<p>
+Aur meri taraf se tumhare liye ek hi dua hai:
+Allah tumhe lambi, khush aur khoobsurat zindagi de,
+tumhare har ache sapne ko haqeeqat banaye,
+aur tumhari aankhon mein aansu sirf khushi ke laaye.
+</p>
+
+<p>
+<strong>Happy Birthday meri jaan. ❤️</strong><br>
+Tumhari smile hamesha aisi hi khoobsurat rahe,
+aur tumhara har aane wala saal tumhare pichle saal se
+zyada beautiful ho.
+</p>
+
+<div class="signature">
+Hamesha tumhari khushi ki dua karne wala,<br>
+<strong>Someone who loves seeing you smile. ❤️</strong>
+</div>
+
+</div>
+
+<div class="divider">❤ ✦ ❤</div>
+
+<div class="wishes">
+    <div class="wish">
+        <div class="emoji">🌙</div>
+        <h3>Sukoon</h3>
+        <p>Tumhare dil ko hamesha sukoon aur peace mile.</p>
+    </div>
+    <div class="wish">
+        <div class="emoji">✨</div>
+        <h3>Khushiyan</h3>
+        <p>Tumhari zindagi hamesha beautiful moments se bhari rahe.</p>
+    </div>
+    <div class="wish">
+        <div class="emoji">💫</div>
+        <h3>Dreams</h3>
+        <p>Tumhara har genuine dream ek din reality ban jaye.</p>
+    </div>
+</div>
+
+<button class="button" onclick="openSurprise()">🎁 Ek Chhota Sa Surprise</button>
+
+<div class="secret" id="secret">
+    <div style="font-size:35px">💖✨💖</div>
+    Agar tum ye parh kar smile kar rahi ho,
+    to samjho mera surprise successful ho gaya. 🥹❤️
+    <br><br>
+    <strong>Happy Birthday, meri jaan. 🎂❤️</strong>
+</div>
+
+</section>
+
+<div class="footer">Made with love, just for you • ❤️</div>
+
+</main>
+
+<script>
+function openSurprise(){
+    const box=document.getElementById("secret");
+    box.style.display="block";
+    box.scrollIntoView({behavior:"smooth",block:"center"});
+
+    for(let i=0;i<28;i++){
+        const h=document.createElement("span");
+        h.textContent=["❤️","💖","💕","✨","💗"][Math.floor(Math.random()*5)];
+        h.style.position="fixed";
+        h.style.left=Math.random()*100+"vw";
+        h.style.top="75vh";
+        h.style.fontSize=(18+Math.random()*22)+"px";
+        h.style.zIndex="99";
+        h.style.pointerEvents="none";
+        document.body.appendChild(h);
+
+        const a=h.animate([
+            {transform:"translateY(0) scale(.4)",opacity:0},
+            {transform:"translateY(-45vh) scale(1.2)",opacity:1},
+            {transform:"translateY(-100vh) scale(.7)",opacity:0}
+        ],{duration:2600+Math.random()*1500,easing:"ease-out"});
+        a.onfinish=()=>h.remove();
+    }
+}
+</script>
+
+</body>
+</html>
